@@ -1,0 +1,326 @@
+[
+  {
+    "id": "koenigsegg",
+    "nombre": "Koenigsegg",
+    "descripcion": "Hipercoches suecos de ingeniería extrema.",
+    "imagen": "/img/logo_de_Koenigsegg.jpg",
+    "modelos": [
+      { "id": "agera-rs", "nombre": "Agera RS", "precio": "2.5M USD", "imagen": "/img/Koenigsegg/Koenigsegg_Gemera.jpg", "descripcion": "Hiperauto de récord mundial.", "modelo3D": "/models/agera-rs." },
+      { "id": "jesko", "nombre": "Jesko", "precio": "3M USD", "imagen": "/img/Koenigsegg/Koenigsegg_Jesko.jpg", "descripcion": "Máquina diseñada para la velocidad extrema.", "modelo3D": "/models/jesko.glb"},
+      { "id": "regera", "nombre": "Regera", "precio": "2.2M USD", "imagen": "/img/Koenigsegg/Koenigsegg_Regera.jpg", "descripcion": "Híbrido de lujo con 1500 HP." , "modelo3D": "/models/regera.glb"}
+    ]
+  },
+
+  {
+  "id": "bugatti",
+  "nombre": "Bugatti",
+  "descripcion": "Máximo lujo y potencia francesa.",
+  "imagen": "/img/Bugatti-Logo.jpg",
+  "modelos": [
+    {
+      "id": "chiron",
+      "nombre": "Bugatti Chiron",
+      "precio": "3M USD",
+      "imagen": "/img/Buggatti/bugatti_chiron.jpg",
+      "descripcion": "Uno de los autos más rápidos del planeta.",
+      "modelo3D": "/models/chiron.glb"
+    },
+    {
+      "id": "divo",
+      "nombre": "Bugatti Divo",
+      "precio": "5M USD",
+      "imagen": "/img/Buggatti/bugatti_divo.jpg",
+      "descripcion": "Superdeportivo de alto rendimiento en curvas.",
+      "modelo3D": "/models/divo.glb"
+    },
+    {
+      "id": "noire",
+      "nombre": "La Voiture Noire",
+      "precio": "16.5M USD",
+      "imagen": "/img/Buggatti/noire.jpg",
+      "descripcion": " El auto más caro del mundo con un diseño único y motor W16 de 1500 HP.",
+      "modelo3D": "/models/noire.glb"
+    },
+    {
+      "id": "veyron",
+      "nombre": "Bugatti Veyron",
+      "precio": "2M USD",
+      "imagen": "/img/Buggatti/veyron.jpg",
+      "descripcion": "translate:Superdeportivo legendario con motor W16 y más de 400 km/h de velocidad máxima.",
+      "modelo3D": "/models/veyron.glb"
+    }
+  ]
+},
+
+  {
+    "id": "lamborghini",
+    "nombre": "Lamborghini",
+    "descripcion": "Superdeportivos italianos con diseño agresivo.",
+    "imagen": "/img/logo_de_Lamborghini.jpg",
+    "modelos": [
+      { "id": "huracan", "nombre": "Huracán", "precio": "260K USD", "imagen": "/img/Lamborghini/Lamborghini_Huracan.jpg", "descripcion": "Motor V10 y diseño radical.", "modelo3D": "/models/agera-rs." },
+      { "id": "aventador", "nombre": "Aventador", "precio": "500K USD", "imagen": "/img/Lamborghini/Lamborghini_Aventador.jpg", "descripcion": "V12 legendario de Lamborghini.", "modelo3D": "/models/agera-rs." },
+      { "id": "revuelto", "nombre": "Revuelto", "precio": "600K USD", "imagen": "/img/Lamborghini/revuelto.jpg", "descripcion": "Primer híbrido V12 de la marca.", "modelo3D": "/models/agera-rs." },
+       {"id": "urus","nombre": "Urus","precio": "270K USD","imagen": "/img/Lamborghini/Lamborghini_Urus.jpg","descripcion": "superdeportivo con motor V8 biturbo de 4.0 litros y 666 CV, capaz de acelerar de 0 a 100 km/h en 3.4 segundos.","modelo3D": "/models/urus.glb"
+}
+
+    ]
+  },
+
+  {
+    "id": "ferrari",
+    "nombre": "Ferrari",
+    "descripcion": "Deportivos italianos de competición y lujo.",
+    "imagen": "/img/ferrari.jpg",
+    "modelos": [
+      { "id": "sf90", "nombre": "SF90 Stradale", "precio": "620K USD", "imagen": "/img/Ferrari/sf90.jpg", "descripcion": "Híbrido de 1000 HP.", "modelo3D": "/models/agera-rs." },
+      { "id": "f8tributo", "nombre": "F8 Tributo", "precio": "350K USD", "imagen": "/img/Ferrari/f8tributo.jpg", "descripcion": "V8 con aerodinámica avanzada." , "modelo3D": "/models/f8tributo."}
+    ]
+  },
+
+  {
+    "id": "maserati",
+    "nombre": "Maserati",
+    "descripcion": "Elegancia italiana con deportividad premium.",
+    "imagen": "/img/Logo_de_Maserati.jpg",
+    "modelos": [
+      { "id": "mc20", "nombre": "MC20", "precio": "210K USD", "imagen": "/img/Maserati/mc20.jpg", "descripcion": "Superdeportivo V6 Nettuno." , "modelo3D": "/models/agera-rs." }
+    ]
+  },
+
+  {
+    "id": "maybach",
+    "nombre": "Maybach",
+    "descripcion": "La división más lujosa de Mercedes-Benz.",
+    "imagen": "/img/Logo_de_Maybach.jpg",
+    "modelos": [
+      { "id": "s680", "nombre": "S 680", "precio": "250K USD", "imagen": "/img/Maybach/s680.jpg", "descripcion": "Lujo absoluto sobre ruedas." , "modelo3D": "/models/agera-rs."}
+    ]
+  },
+
+  {
+    "id": "lexus",
+    "nombre": "Lexus",
+    "descripcion": "Lujo japonés con híbridos de alta ingeniería.",
+    "imagen": "/img/logo_de_Lexus.jpg",
+    "modelos": [
+      { "id": "lc500", "nombre": "LC 500", "precio": "95K USD", "imagen": "/img/Lexus/Lexus_LX.jpg", "descripcion": "Coupé deportivo con motor V8.", "modelo3D": "/models/agera-rs." }
+    ]
+  },
+
+  {
+    "id": "audir8",
+    "nombre": "Audi",
+    "descripcion": "Tecnología alemana con estilo premium.",
+    "imagen": "/img/audi.jpg",
+    "modelos": [
+      { "id": "audir8", "nombre": "Audi R8", "precio": "200K USD", "imagen": "/img/Audi/audir8.jpg", "descripcion": "Superdeportivo V10 icónico." , "modelo3D": "/models/audir8."}
+    ]
+  },
+
+  {
+    "id": "bmwm4",
+    "nombre": "BMW",
+    "descripcion": "Deportivos alemanes con ADN de competición.",
+    "imagen": "/img/bmw.jpg",
+    "modelos": [
+      { "id": "bmwm4", "nombre": "BMW M4", "precio": "75K USD", "imagen": "/img/BMW/bmwm4.jpg", "descripcion": "Coupé de alto rendimiento.", "modelo3D": "/models/bmwm4.glb" }
+    ]
+  },
+
+ {
+  "id": "mercedes",
+  "nombre": "Mercedes-Benz",
+  "descripcion": "Lujo, tecnología y rendimiento alemán.",
+  "imagen": "/img/Logo_de_MercedesBenz.jpg",
+  "modelos": [
+    {
+      "id": "amg-gt",
+      "nombre": "AMG GT",
+      "precio": "150K USD",
+      "imagen": "/img/Mercedes-Benz/MercedesAMG_GT.jpg",
+      "descripcion": "Super GT alemán con alma de pista.",
+      "modelo3D": "/models/agera-rs."
+    },
+    {
+      "id": "g63",
+      "nombre": "G63 Brabus 800 Superblack",
+      "precio": "Aprox. 300K USD",
+      "imagen": "/img/Mercedes-Benz/g63.jpg",
+      "descripcion": "Brabus eleva el Mercedes-AMG G 63 a un super SUV con 800 hp y 1000 Nm de torque, acelerando de 0 a 100 km/h en 4.0 segundos, con lujo y tecnología de punta.",
+      "modelo3D": "/models/g63.glb"
+    }
+  ]
+}
+
+  ,
+  {
+  "id": "toyota",
+  "nombre": "Toyota",
+  "descripcion": "Fiabilidad japonesa y tecnología avanzada.",
+  "imagen": "/img/Toyota.jpg",
+  "modelos": [
+    {
+      "id": "supra",
+      "nombre": "Supra",
+      "precio": "50K USD",
+      "imagen": "/img/Toyota/supra.jpg",
+      "descripcion": "Deportivo legendario con motor turbo.",
+      "modelo3D": "/models/supra."
+    },
+    {
+      "id": "camry",
+      "nombre": "Camry",
+      "precio": "25K USD",
+      "imagen": "/img/Toyota/camry.jpg",
+      "descripcion": "Sedán cómodo y eficiente.",
+      "modelo3D": "/models/camry."
+    },
+    {
+      "id": "land-cruiser",
+      "nombre": "Land Cruiser",
+      "precio": "90K USD",
+      "imagen": "/img/Toyota/landcruiser.jpg",
+      "descripcion": "SUV robusto para cualquier terreno.",
+      "modelo3D": "/models/land-cruiser."
+    }
+  ]
+}
+,
+{
+  "id": "honda",
+  "nombre": "Honda",
+  "descripcion": "Innovación japonesa y confiabilidad.",
+  "imagen": "/img/Honda.jpg",
+  "modelos": [
+    {
+      "id": "civic",
+      "nombre": "Civic",
+      "precio": "22K USD",
+      "imagen": "/img/Honda/civic.jpg",
+      "descripcion": "Sedán compacto y eficiente.",
+      "modelo3D": "/models/civic."
+    },
+    {
+      "id": "accord",
+      "nombre": "Accord",
+      "precio": "28K USD",
+      "imagen": "/img/Honda/accord.jpg",
+      "descripcion": "Sedán mediano con tecnología avanzada.",
+      "modelo3D": "/models/accord."
+    },
+    {
+      "id": "nsx",
+      "nombre": "NSX",
+      "precio": "150K USD",
+      "imagen": "/img/Honda/nsx.jpg",
+      "descripcion": "Deportivo híbrido de alto rendimiento.",
+      "modelo3D": "/models/nsx."
+    }
+  ]
+},
+{
+  "id": "ford",
+  "nombre": "Ford",
+  "descripcion": "Icono estadounidense de fuerza y resistencia.",
+  "imagen": "/img/Ford.jpg",
+  "modelos": [
+    {
+      "id": "mustang",
+      "nombre": "Mustang",
+      "precio": "55K USD",
+      "imagen": "/img/Ford/mustang.jpg",
+      "descripcion": "Muscle car clásico y potente.",
+      "modelo3D": "/models/mustang."
+    },
+    {
+      "id": "f-150",
+      "nombre": "F-150",
+      "precio": "35K USD",
+      "imagen": "/img/Ford/f150.jpg",
+      "descripcion": "Camioneta robusta para trabajo y aventura.",
+      "modelo3D": "/models/f-150."
+    },
+    {
+      "id": "explorer",
+      "nombre": "Explorer",
+      "precio": "45K USD",
+      "imagen": "/img/Ford/explorer.jpg",
+      "descripcion": "SUV espaciosa y cómoda para la familia.",
+      "modelo3D": "/models/explorer."
+    }
+  ]
+},
+{
+  "id": "tesla",
+  "nombre": "Tesla",
+  "descripcion": "Revolución eléctrica y tecnología de punta.",
+  "imagen": "/img/Tesla.jpg",
+  "modelos": [
+    {
+      "id": "model-s",
+      "nombre": "Model S",
+      "precio": "90K USD",
+      "imagen": "/img/Tesla/Tesla_Model_S_Plaid.jpg",
+      "descripcion": "Sedán eléctrico de lujo y alta autonomía.",
+      "modelo3D": "/models/model-s."
+    },
+    {
+      "id": "model-3",
+      "nombre": "Model 3",
+      "precio": "40K USD",
+      "imagen": "/img/Tesla/model3.jpg",
+      "descripcion": "Eléctrico compacto y accesible.",
+      "modelo3D": "/models/model-3."
+    },
+    {
+  "id": "roadster",
+  "nombre": "Roadster",
+  "precio": "200K USD",
+  "imagen": "/img/Tesla/Tesla_Roadster.jpg",
+  "descripcion": "Superdeportivo 100% eléctrico, aceleración de 0 a 100 km/h en 2.1 segundos y autonomía de 620 km.",
+  "modelo3D": "/models/roadster.glb"
+},
+    {
+  "id": "model-x",
+  "nombre": "Model X",
+  "precio": "100K USD",
+  "imagen": "/img/Tesla/Tesla_Model_X_Plaid.jpg",
+  "descripcion": "Eléctrico con puertas de ala de halcón, hasta 1020 CV de potencia y aceleración de 0 a 100 km/h en 2.6 segundos.",
+  "modelo3D": "/models/model-x.glb"
+}]
+}
+, 
+{
+  "id": "chevrolet",
+  "nombre": "Chevrolet",
+  "descripcion": "Marca icónica estadounidense, famosa por sus muscle cars.",
+  "imagen": "/img/Chevrolet.jpg",
+  "modelos": [
+    {
+      "id": "camaro",
+      "nombre": "Camaro ZL1",
+      "precio": "70K USD",
+      "imagen": "/img/Chevrolet/camaro.jpg",
+      "descripcion": "Muscle car con motor V8 súper cargado de 650 hp.",
+      "modelo3D": "/models/camaro."
+    },
+    {
+      "id": "silverado",
+      "nombre": "Silverado",
+      "precio": "45K USD",
+      "imagen": "/img/Chevrolet/silverado.jpg",
+      "descripcion": "Camioneta pickup de alta resistencia y capacidad.",
+      "modelo3D": "/models/silverado."
+    },
+    {
+      "id": "equinox",
+      "nombre": "Equinox",
+      "precio": "30K USD",
+      "imagen": "/img/Chevrolet/equinox.jpg",
+      "descripcion": "SUV mediana con buena economía y confort.",
+      "modelo3D": "/models/equinox."
+    }
+  ]
+}
+]
