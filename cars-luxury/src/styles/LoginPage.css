@@ -1,4 +1,7 @@
-.neon-gold-login-background {
+/* BLOQUE: login */
+
+/* Fondo general */
+.login__background {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,7 +11,8 @@
   overflow: hidden;
 }
 
-.neon-gold-login-anim {
+/* Animación de neón */
+.login__anim {
   position: absolute;
   top: -25%;
   left: -35%;
@@ -16,108 +20,134 @@
   height: 170vh;
   pointer-events: none;
   z-index: 1;
-  background:
-    radial-gradient(circle, rgba(255,215,0,0.15) 18%, transparent 75%);
+  background: radial-gradient(circle, rgba(255,215,0,0.15) 18%, transparent 75%);
   filter: blur(65px) brightness(1.25);
   animation: neonGoldSweep 7s linear infinite alternate;
 }
 
 @keyframes neonGoldSweep {
-  0% {
-    transform: rotate(2deg) translate(0px, 0px) scale(1);
-    opacity: .85;
-  }
-  60% {
-    transform: rotate(-8deg) translate(40px, 60px) scale(1.08);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-14deg) translate(-80px, 180px) scale(1.16);
-    opacity: .95;
-  }
+  0% { transform: rotate(2deg) translate(0, 0) scale(1); opacity: 0.85; }
+  60% { transform: rotate(-8deg) translate(40px, 60px) scale(1.08); opacity: 1; }
+  100% { transform: rotate(-14deg) translate(-80px, 180px) scale(1.16); opacity: 0.95; }
 }
 
-.neon-gold-login-box {
+/* Caja del formulario */
+.login__box {
   position: relative;
   z-index: 2;
   background: rgba(24, 20, 10, 0.94);
   border-radius: 20px;
-  box-shadow:
-    0 0 30px 8px #ffd70033,
-    0 0 9px 2px #fff8e166,
-    0 0 5px 2px #fffacd55;
+  box-shadow: 0 0 30px 8px #ffd70033,
+              0 0 9px 2px #fff8e166,
+              0 0 5px 2px #fffacd55;
   border: 2.5px solid #ffd700;
   padding: 2.2rem 2.6rem;
-  width: 350px;
+  width: 100%;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
   animation: neonGoldPop 1.3s cubic-bezier(.49,.02,.32,1.07);
 }
 
+/* Animación de entrada */
 @keyframes neonGoldPop {
-  0% { opacity: 0; transform: scale(.7);}
-  80% { opacity: 1; transform: scale(1.14);}
-  100% { opacity: 1; transform: scale(1);}
+  0% { opacity: 0; transform: scale(0.7); }
+  80% { opacity: 1; transform: scale(1.14); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
-.neon-gold-login-title {
+/* Título */
+.login__title {
   text-align: center;
   font-size: 2.1rem;
   color: #f0eee8;
   text-shadow: 0 0 12px #ffd70088, 0 0 26px #fffacd44;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-family: 'Montserrat', Arial, sans-serif;
-  margin-bottom: .4em;
+  margin-bottom: 0.5em;
 }
 
-.neon-gold-login-input {
+/* Labels */
+.login__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #f0eee8;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Inputs */
+.login__input {
   background: #131313;
   border: 2px solid #fff8e1;
   border-radius: 8px;
-  padding: 0.98rem 1rem;
+  padding: 0.95rem 1rem;
   font-size: 1.03rem;
   color: #fff;
   box-shadow: 0 0 9px #fffacd33;
-  transition: border .2s, box-shadow .2s, background .2s;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
   font-family: 'Montserrat', Arial, sans-serif;
   outline: none;
 }
 
-.neon-gold-login-input:focus {
+.login__input:focus {
   background: #191408;
   border-color: #ffd700;
   box-shadow: 0 0 15px #ffd70077;
 }
 
-.neon-gold-login-btn {
+/* Botón */
+.login__btn {
   background: linear-gradient(85deg, #ffd700 13%, #fff8e1 100%);
   border: none;
   border-radius: 10px;
   padding: 1rem;
   color: #161616;
-  font-size: 1.10rem;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   filter: drop-shadow(0 4px 14px #ffd700aa) drop-shadow(0 0 5px #fff8e166);
   box-shadow: 0 0 17px #ffd70055;
-  transition: filter .22s, box-shadow .22s, background .22s;
+  transition: filter 0.22s, box-shadow 0.22s, background 0.22s;
 }
 
-.neon-gold-login-btn:hover, .neon-gold-login-btn:focus {
+.login__btn:hover,
+.login__btn:focus {
   background: linear-gradient(90deg, #fff8e1 0%, #ffd700 100%);
   filter: drop-shadow(0 7px 22px #ffd700ee) drop-shadow(0 0 10px #fff8e199);
   box-shadow: 0 0 24px #ffd700dd;
+  outline: none;
 }
 
-.neon-gold-login-error {
+/* Mensaje de error */
+.login__error {
   background: #191408;
   color: #f1f1ef;
   border: 1.5px solid #ffd700;
   border-radius: 8px;
-  font-size: 1.01rem;
+  font-size: 1rem;
   padding: 8px;
   text-align: center;
-  margin-top: .2em;
+  margin-top: 0.2em;
   filter: drop-shadow(0 0 9px #ffd70033);
+}
+
+/* Foco accesible para inputs y botón */
+.login__input:focus,
+.login__btn:focus {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .login__box {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .login__title {
+    font-size: 1.8rem;
+  }
 }

@@ -4,30 +4,30 @@ export default function LayoutPrivado() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Elimina el token
-    navigate("/login", { replace: true }); // Redirige al login reemplazando el historial
+    localStorage.removeItem("token");
+    navigate("/login", { replace: true });
   };
 
   return (
     <div className="app-container">
       <header className="header">
-        <div className="menu container">
+        <div className="header__container">
           <div>
-            <Link to="/" className="logo-header">LUXURY SPORT VEHICLES</Link>
+            <Link to="/" className="header__logo">LUXURY SPORT VEHICLES</Link>
           </div>
-          <nav className="navbar">
-            <ul>
-              <li className="botones-header"><Link to="/redes">Redes sociales</Link></li>
-              <li className="botones-header"><Link to="/diseñadores">Diseñadores</Link></li>
-              <li className="botones-header"><Link to="/noticias">Noticias</Link></li>
-              <li className="botones-header"><Link to="/catalogo">Catálogo</Link></li>
-              <li>
-                <Link to="/">
-                  <img src="/public/img/icono_inicio.jpg" alt="" className="icono-session" />
-                </Link>
+          <nav className="header__navbar">
+            <ul className="header__navbar-list">
+              <li className="header__navbar-item">
+                <Link to="/redes" className="header__navbar-link">Redes sociales</Link>
               </li>
-              <li>
-                <button onClick={handleLogout} className="botones-header logout-button">
+              <li className="header__navbar-item">
+                <Link to="/diseñadores" className="header__navbar-link">Diseñadores</Link>
+              </li>
+              <li className="header__navbar-item">
+                <Link to="/noticias" className="header__navbar-link">Noticias</Link>
+              </li>
+              <li className="header__navbar-item">
+                <button onClick={handleLogout} className="logout-button">
                   Cerrar Sesión
                 </button>
               </li>
@@ -36,9 +36,9 @@ export default function LayoutPrivado() {
         </div>
       </header>
       <main>
-        <Outlet /> {/* Aquí salen las páginas privadas */}
+        <Outlet />
       </main>
-      <footer className="main-footer">
+      <footer className="footer">
         <p>© 2025 CARS LUXURY - Todos los derechos reservados</p>
       </footer>
     </div>

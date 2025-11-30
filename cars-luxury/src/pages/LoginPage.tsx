@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/LoginPage.css";
 
@@ -8,7 +8,7 @@ export default function NeonLoginPage() {
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e: { preventDefault: () => void; }) => {
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const res = await fetch("http://localhost:3001/auth/login", {
@@ -24,19 +24,23 @@ export default function NeonLoginPage() {
       }
 
       localStorage.setItem("token", data.token);
-      navigate("/", { replace: true }); // Redirige a la landing y reemplaza el historial
+      navigate("/", { replace: true });
     } catch (error) {
       setMsg("Error del servidor, intenta más tarde");
     }
   };
 
   return (
-    <div className="neon-gold-login-background">
-      <div className="neon-gold-login-anim"></div>
-      <form className="neon-gold-login-box" onSubmit={handleLogin}>
-        <h1 className="neon-gold-login-title">Iniciar Sesión</h1>
+    <div className="login__background">
+      <div className="login__anim" aria-hidden="true"></div>
+
+      <form className="login__box" onSubmit={handleLogin}>
+        <h1 className="login__title">Iniciar Sesión</h1>
+
+        <label htmlFor="email" className="login__label">Correo electrónico</label>
         <input
-          className="neon-gold-login-input"
+          id="email"
+          className="login__input"
           type="email"
           placeholder="Correo electrónico"
           value={email}
@@ -44,8 +48,11 @@ export default function NeonLoginPage() {
           required
           autoComplete="email"
         />
+
+        <label htmlFor="password" className="login__label">Contraseña</label>
         <input
-          className="neon-gold-login-input"
+          id="password"
+          className="login__input"
           type="password"
           placeholder="Contraseña"
           value={password}
@@ -53,8 +60,10 @@ export default function NeonLoginPage() {
           required
           autoComplete="current-password"
         />
-        <button type="submit" className="neon-gold-login-btn">Ingresar</button>
-        {msg && <p className="neon-gold-login-error">{msg}</p>}
+
+        <button type="submit" className="login__btn">Ingresar</button>
+
+        {msg && <p className="login__error" role="alert">{msg}</p>}
       </form>
     </div>
   );

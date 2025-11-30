@@ -4,8 +4,6 @@ import "../styles/estilos.css";
 
 export default function BrandPage() {
   const { id } = useParams();
-
-  // Buscar la marca por id
   const marca = marcas.find((m) => m.id === id);
 
   if (!marca) {
@@ -14,32 +12,24 @@ export default function BrandPage() {
 
   return (
     <div className="brand-container">
-
-      {/* Encabezado */}
-      <h1 className="brand-title">{marca.nombre}</h1>
-      <p className="brand-description">{marca.descripcion}</p>
-
-      {/* Modelos */}
-      <h2 className="brand-subtitle">Modelos destacados</h2>
-
-      <div className="catalogo-grid">
+      <h1 className="brand__title">{marca.nombre}</h1>
+      <p className="brand__description">{marca.descripcion}</p>
+      <h2 className="brand__subtitle">Modelos destacados</h2>
+      <div className="catalogo__grid">
         {marca.modelos.map((modelo) => (
           <div key={modelo.id} className="catalogo-card">
-            <img src={modelo.imagen} alt={modelo.nombre} />
-
-            <div className="catalogo-info">
-              <h3>{modelo.nombre}</h3>
-              <p>{modelo.descripcion}</p>
-              <p className="price-tag">{modelo.precio}</p>
-
-              <a className="btn-2" href={`/marca/${marca.id}/modelo/${modelo.id}`}> Más información
+            <img src={modelo.imagen} alt={modelo.nombre} className="catalogo-card__image" />
+            <div className="catalogo-card__info">
+              <h3 className="catalogo-card__title">{modelo.nombre}</h3>
+              <p className="catalogo-card__description">{modelo.descripcion}</p>
+              <p className="catalogo-card__price">{modelo.precio}</p>
+              <a className="btn--secondary" href={`/marca/${marca.id}/modelo/${modelo.id}`}>
+                Más información
               </a>
-              
             </div>
           </div>
         ))}
       </div>
-
     </div>
   );
 }
