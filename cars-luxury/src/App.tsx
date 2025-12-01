@@ -1,12 +1,6 @@
-import AuthTest from "./components/AuthTest";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/AppRouter";
 
-function App() {
-  return (
-    <div>
-      <h1>Cars Luxury Test</h1>
-      <AuthTest />
-    </div>
-  );
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App;
