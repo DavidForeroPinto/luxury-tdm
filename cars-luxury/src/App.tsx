@@ -1,5 +1,12 @@
-import Layout from "./components/LayoutPrivado";
+import AuthTest from "./components/AuthTest";
 
-export default function App() {
-  return <Layout />;
+function App() {
+  return (
+    <div>
+      <h1>Cars Luxury Test</h1>
+      <AuthTest />
+    </div>
+  );
 }
+
+export default App;

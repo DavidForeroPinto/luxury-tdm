@@ -1,21 +1,28 @@
-const API_URL = "http://localhost:3001/api";
+// src/services/authService.js
 
-export async function login(email, password) {
-  const res = await fetch(`${API_URL}/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
-  });
+// URL base del backend desde las variables de entorno de Vite
+const API_URL = import.meta.env.VITE_API_URL;
 
-  return await res.json();
+if (!API_URL) {
+  console.warn("VITE_API_URL no está definida. Configúrala en .env y en Vercel.");
 }
 
-export async function register(email, password) {
-  const res = await fetch(`${API_URL}/register`, {
+// Función para login
+export async function login(email, password) {
+  const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password }),
   });
+  return res.json();
+}
 
-  return await res.json();
+// Función para registro
+export async function register(email, password) {
+  const res = await fetch(`${API_URL}/auth/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  return res.json();
 }
