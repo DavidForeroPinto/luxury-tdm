@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 import { register } from "../services/authService";
 
 export default function RegisterPage() {
@@ -51,3 +51,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+ */

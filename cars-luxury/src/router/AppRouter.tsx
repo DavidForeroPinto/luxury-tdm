@@ -13,7 +13,7 @@ import CatalogoPage from "../pages/CatalogoPage";
 import BrandPage from "../pages/BrandPage";
 import ModelPage from "../pages/ModelPage";
 import LoginPage from "../pages/LoginPage";
-import RegisterPage from "../pages/RegisterPage";
+/*import RegisterPage from "../pages/RegisterPage";*/
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
     element: <LayoutPublico />, // Layout para rutas públicas (login, registro)
     children: [
       { path: "/login", element: <LoginPage /> },
-      { path: "/register", element: <RegisterPage /> },
+      /*{ path: "/register", element: <RegisterPage /> },*/
     ],
   },
   // Opcionalmente puedes agregar ruta 404 aquí:
