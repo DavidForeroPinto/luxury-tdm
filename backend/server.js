@@ -1,20 +1,26 @@
+// server.js
 import express from "express";
 import cors from "cors";
-import auth from './routes/auth.js';
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+// Middleware
+app.use(cors());          // Permite que el frontend acceda
+app.use(express.json());  // Para recibir JSON en requests
 
-// Rutas
-app.use("/auth", auth);
-
-// Home
+// Rutas de prueba
 app.get("/", (req, res) => {
-  res.send("API Cars Luxury funcionando 🚀");
+  res.send("Servidor backend funcionando correctamente ✅");
 });
 
-app.listen(3001, () => {
-  console.log("Servidor backend en http://localhost:3001");
+// Aquí agregas tus rutas reales
+// import authRoutes from "./routes/auth.js";
+// app.use("/auth", authRoutes);
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Servidor backend en puerto ${PORT}`);
 });

@@ -1,5 +1,5 @@
+// routes/auth.js
 import express from "express";
-import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import fs from "fs";
 import path from "path";
@@ -7,7 +7,7 @@ import path from "path";
 const router = express.Router();
 const __dirname = path.resolve();
 
-const USERS_PATH = path.join(__dirname, "data/users.json");
+const USERS_PATH = path.join(__dirname, "data", "users.json");
 
 // Leer base de datos
 function readUsers() {
@@ -20,12 +20,11 @@ function saveUsers(users) {
   fs.writeFileSync(USERS_PATH, JSON.stringify(users, null, 2));
 }
 
-// REGISTER SIN ENCRIPTAR
+// REGISTER (demo sin encriptar)
 router.post("/register", (req, res) => {
   const { email, password } = req.body;
   const users = readUsers();
 
-  // validar si existe
   if (users.find((u) => u.email === email)) {
     return res.status(400).json({ msg: "El usuario ya existe" });
   }
@@ -33,7 +32,7 @@ router.post("/register", (req, res) => {
   const newUser = {
     id: Date.now(),
     email,
-    password, // 🔥 sin encriptar
+    password, // solo para pruebas; en producción debería ir encriptada
   };
 
   users.push(newUser);
@@ -42,7 +41,7 @@ router.post("/register", (req, res) => {
   res.json({ msg: "Usuario registrado correctamente" });
 });
 
-// LOGIN SIN ENCRIPTAR
+// LOGIN (demo sin encriptar)
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   const users = readUsers();
@@ -57,9 +56,11 @@ router.post("/login", (req, res) => {
     return res.status(400).json({ msg: "Contraseña incorrecta" });
   }
 
-  const token = jwt.sign({ id: user.id, email: user.email }, "secretKey123", {
-    expiresIn: "2h",
-  });
+  const token = jwt.sign(
+    { id: user.id, email: user.email },
+    process.env.JWT_SECRET || "secretKey123",
+    { expiresIn: "2h" }
+  );
 
   res.json({ msg: "Login exitoso", token });
 });
